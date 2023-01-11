@@ -1,0 +1,20 @@
+{% extends 'clientnews.html'%}
+{% block title %} NEWSDETAIL {% endblock %}
+{% block content %}
+
+<a href="/news/update/{{newsdetail.id}}/">Update</a>
+<br>
+<a href="/news/delete/{{newsdetail.id}}/">Delete</a>
+
+<h3>{{newsdetail.title}}</h3>
+<br>
+<h3>{{newsdetail.category}}</h3>
+<br>
+<p style="color: blueviolet;">{{newsdetail.content}}</p>
+<br>
+<img src="{{newsdetail.image.url}}" alt="">
+<h3>{{newsdetail.auther}}</h3>
+<br>
+View count : {{newsdetail.viewed}}
+
+{% endblock %}
